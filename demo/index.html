@@ -20,7 +20,24 @@
       <h3>Basic code-area Demo</h3>
       <demo-snippet>
         <template>
-          <code-area></code-area>
+          <code-area mode="javascript">var keyBindings = {
+  enter: "newline-and-indent",
+  tab: "reindent-selection",
+  ctrl_z: "undo",
+  ctrl_y: "redo",
+  ctrl_bracket: "highlight-brackets",
+  ctrl_shift_bracket: "jump-to-matching-bracket"
+};
+
+// Press tab on the next line and the wrong indentation will be fixed.
+var regex = /foo|bar/i;
+
+function example(x) {
+  // Local variables get a different colour than global ones.
+  var y = 44.4;
+  return x + y - z;
+}
+          </code-area>
         </template>
       </demo-snippet>
     </div>
