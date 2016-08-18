@@ -2,6 +2,22 @@
 
 Polymer element wrapping CodeMirror (highlighting syntax, plugins and options)
 
+
+## How To
+
+Install with Bower:
+
+`bower install loicmarie/code-area`
+
+Then you wan use it as follow:
+
+`<code-area mode="javascript" line-numbers></code-area>`
+
+See [official Polymer element documentation](https://loicmarie.github.io/code-area/) for more details on element
+and [CodeMirror documentation](http://codemirror.net/doc/manual.html#config) for more configurable options
+
+PRs are welcome !
+
 ## Install the Polymer-CLI
 
 First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
