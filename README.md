@@ -18,7 +18,7 @@ Then you wan use it as follow:
 <code-area mode="javascript" line-numbers></code-area>
 ```
 
-See [official Polymer element documentation](https://loicmarie.github.io/code-area/) for more details on element et online demonstration.
+See [official Polymer element documentation](https://loicmarie.github.io/code-area/) for more details on element and online demonstration.
 See also [CodeMirror documentation](http://codemirror.net/doc/manual.html#config) for more configurable options
 
 PRs are welcome !
