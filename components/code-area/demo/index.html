@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <title>code-area demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+
+    <link rel="import" href="../code-area.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+  </head>
+  <body>
+
+    <div class="vertical-section-container centered">
+      <h3>JavaScript example</h3>
+      <demo-snippet>
+        <template>
+<code-area mode="javascript" line-numbers>var keyBindings = {
+  enter: "newline-and-indent",
+  tab: "reindent-selection",
+  ctrl_z: "undo",
+  ctrl_y: "redo",
+  ctrl_bracket: "highlight-brackets",
+  ctrl_shift_bracket: "jump-to-matching-bracket"
+};
+
+var regex = /foo|bar/i;
+
+function example(x) {
+  // You can comment as well
+  var y = 44.4;
+  return x + y - z;
+}
+</code-area>
+        </template>
+      </demo-snippet>
+      <h3>Python example</h3>
+      <demo-snippet>
+        <template>
+<code-area mode="python" line-numbers>import numpy as np
+cimport cython
+from libc.math cimport sqrt
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+def pairwise_cython(double[:, ::1] X):
+    cdef int M = X.shape[0]
+    cdef int N = X.shape[1]
+    cdef double tmp, d
+    cdef double[:, ::1] D = np.empty((M, M), dtype=np.float64)
+    for i in range(M):
+        for j in range(M):
+            d = 0.0
+            for k in range(N):
+                tmp = X[i, k] - X[j, k]
+                d += tmp * tmp
+            D[i, j] = sqrt(d)
+    return np.asarray(D)
+</code-area>
+        </template>
+      </demo-snippet>
+      <h3>Dockerfile example</h3>
+      <demo-snippet>
+        <template>
+<code-area mode="dockerfile" on-change="function(){console.log('Changed !')}" line-numbers=false>FROM ubuntu:latest
+
+MAINTAINER loic.marie
+
+RUN sudo apt-get update && apt-get install -y \
+  wget \
+  unzip \
+  python-dev
+
+</code-area>
+        </template>
+      </demo-snippet>
+    </div>
+
+  </body>
+</html>
