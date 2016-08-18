@@ -2,6 +2,7 @@
 
 Polymer element wrapping CodeMirror (highlighting syntax, plugins and options)
 
+![alt text](http://www.jquerypluginsfree.com/wp-content/uploads/2016/01/CodeMirror.png "CodeMirror Dark theme")
 
 ## How To
 
